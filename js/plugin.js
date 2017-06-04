@@ -22,7 +22,7 @@
 		// init Masonry after all images have loaded
 		$grid.masonry({
 			// options...
-			columnWidth: 200,
+			//columnWidth: 200,
 			itemSelector: '.item'
 		});
 	});
