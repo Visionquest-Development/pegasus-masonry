@@ -1,7 +1,7 @@
 # pegasus-masonry
 
 
-What is the difference between Masonry, Isotope, and Packery?
+**What is the difference between Masonry, Isotope, and Packery?**
 
 
 Masonry, Isotope, and Packery are all similar in that they are layout libraries. Many of their options and methods are the same.
