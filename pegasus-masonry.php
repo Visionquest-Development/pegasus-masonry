@@ -20,7 +20,7 @@ Domain Path: /languages
 	}
 
 	function pegasus_masonry_menu_item() {
-		add_menu_page("Masonry", "Masonry", "manage_options", "pegasus_masonry_plugin_options", "pegasus_masonry_plugin_settings_page", null, 99);
+		//add_menu_page("Masonry", "Masonry", "manage_options", "pegasus_masonry_plugin_options", "pegasus_masonry_plugin_settings_page", null, 99);
 		
 	}
 	add_action("admin_menu", "pegasus_masonry_menu_item");
@@ -70,9 +70,10 @@ Domain Path: /languages
 		
 			$output = '';
 			
-				$output .= '<div id="masonry-grid" class="" >';
+				$output .= '<div style="display: block;"><div id="masonry-grid" class="" >';
 					$output .=   do_shortcode($content);
-				$output .= '</div><br clear="all">';
+				$output .= '</div>';
+				$output .= '</div>';
 			
 			return $output; 
 		}
