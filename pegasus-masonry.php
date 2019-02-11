@@ -49,11 +49,11 @@ Domain Path: /languages
 		//wp_enqueue_script( 'one-page-scroll-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/jquery.onepage-scroll.js', array( 'jquery' ), null, true );
 		//wp_enqueue_script( 'snap-scroll-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/jquery.snapscroll.js', array( 'jquery' ), null, true );
 		//wp_enqueue_script( 'scrollspy-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/scrollspy.js', array( 'jquery' ), null, true );
-		
-		wp_enqueue_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, true );
-		
-		wp_enqueue_script( 'masonry-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/masonry.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'pegasus-masonry-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, true );
+
+		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, 'all' );
+
+		wp_register_script( 'masonry-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/masonry.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-masonry-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, 'all' );
 		
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_masonry_plugin_js' );
@@ -70,11 +70,14 @@ Domain Path: /languages
 		
 			$output = '';
 			
-				$output .= '<div style="display: block;"><div id="masonry-grid" class="" >';
+				$output .= '<div id="masonry-grid" class="" >';
 					$output .=   do_shortcode($content);
 				$output .= '</div>';
-				$output .= '</div>';
-			
+
+			wp_enqueue_script( 'images-loaded-js' );
+			wp_enqueue_script( 'masonry-js' );
+			wp_enqueue_script( 'pegasus-masonry-plugin-js' );
+
 			return $output; 
 		}
 		add_shortcode( 'masonry', 'pegasus_mason_func' );
