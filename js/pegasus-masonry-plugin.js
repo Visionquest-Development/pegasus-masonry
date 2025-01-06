@@ -2,9 +2,9 @@
 	'use strict';
 
 	//this is for masonry / packery - it adds the item class to each image
-	$('#masonry-grid').find('img').each(function() {
-		$(this).addClass('item');
-	});
+	//$('.masonry-grid').find('img').each(function() {
+		//$(this).addClass('item');
+	//});
 
 	// init Masonry
 	/*var $grid = $('#masonry-grid').masonry({
@@ -18,13 +18,13 @@
 	});
 	*/
 
-	var $grid = $('#masonry-grid').imagesLoaded( function() {
+	var $grid = $('.masonry-grid').imagesLoaded( function() {
 		// init Masonry after all images have loaded
 		$grid.masonry({
 			// options...
 			//columnWidth: 200,
-			itemSelector: '.item',
-      //gutter: 10
+			itemSelector: '.masonry-grid img',
+      gutter: 10
 		});
 	});
 

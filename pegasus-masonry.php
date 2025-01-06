@@ -229,7 +229,7 @@ Domain Path: /languages
 
 
 	function pegasus_masonry_plugin_styles() {
-		//wp_enqueue_style( 'masonry-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/masonry.css', array(), null, 'all' );
+		wp_enqueue_style( 'masonry-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/masonry.css', array(), null, 'all' );
 		//wp_enqueue_style( 'slippery-slider-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/slippery-slider.css', array(), null, 'all' );
 	}
 	add_action( 'wp_enqueue_scripts', 'pegasus_masonry_plugin_styles' );
@@ -246,7 +246,7 @@ Domain Path: /languages
 		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, 'all' );
 
 		wp_register_script( 'masonry-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/masonry.js', array( 'jquery' ), null, 'all' );
-		wp_register_script( 'pegasus-masonry-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-masonry-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-masonry-plugin.js', array( 'jquery' ), null, 'all' );
 
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_masonry_plugin_js' );
@@ -263,7 +263,7 @@ Domain Path: /languages
 
 			$output = '';
 
-				$output .= '<div id="masonry-grid" class="" >';
+				$output .= '<div id="masonry-grid-container" class="masonry-grid" >';
 					$output .=   do_shortcode($content);
 				$output .= '</div>';
 
