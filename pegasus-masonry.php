@@ -263,7 +263,7 @@ Domain Path: /languages
 
 			$output = '';
 
-				$output .= '<div id="masonry-grid-container" class="masonry-grid" >';
+				$output .= '<div class="masonry-grid" >';
 					$output .=   do_shortcode($content);
 				$output .= '</div>';
 
