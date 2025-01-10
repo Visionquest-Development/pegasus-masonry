@@ -246,7 +246,7 @@ Domain Path: /languages
 		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, 'all' );
 
 		wp_register_script( 'masonry-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/masonry.js', array( 'jquery' ), null, 'all' );
-		wp_register_script( 'pegasus-masonry-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-masonry-plugin.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-masonry-plugin', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-masonry-plugin.js', array( 'jquery' ), null, 'all' );
 
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_masonry_plugin_js' );
@@ -257,19 +257,25 @@ Domain Path: /languages
 	// [masonry ] content [/masonry]
 		function pegasus_mason_func( $atts, $content = null ) {
 			$a = shortcode_atts( array(
-				'id' => '',
+				//'id' => '',
 				'class' => ''
 			), $atts );
 
+			if ( !empty( $a['class'] ) ) {
+				$class = $a['class'];
+			} else {
+				$class = '';
+			}
+
 			$output = '';
 
-				$output .= '<div class="masonry-grid" >';
+				$output .= '<div class="masonry-grid ' . $class .  ' " >';
 					$output .=   do_shortcode($content);
 				$output .= '</div>';
 
 			wp_enqueue_script( 'images-loaded-js' );
 			wp_enqueue_script( 'masonry-js' );
-			wp_enqueue_script( 'pegasus-masonry-plugin-js' );
+			wp_enqueue_script( 'pegasus-masonry-plugin' );
 
 			return $output;
 		}
