@@ -142,24 +142,24 @@ Domain Path: /languages
 					}
 				</style>
 				<pre >[masonry]<?php echo htmlspecialchars('
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">'); ?>
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/abarth.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Acura.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/alfaromeo.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Aston-Martin.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Audi.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/bentley.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/BMW.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Buick.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Cadillac.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Chevrolet.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/chrysler.png">'); ?>
 
 [/masonry]</pre>
 
 				<input
 					type="text"
 					readonly
-					value="<?php echo esc_html('[masonry]<img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/">[/masonry]'); ?>"
+					value="<?php echo esc_html('[masonry]<img src="http://pegasustheme.com/wp-content/uploads/2025/01/abarth.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Acura.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/alfaromeo.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Aston-Martin.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Audi.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/bentley.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/BMW.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Buick.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Cadillac.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Chevrolet.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/chrysler.png">[/masonry]'); ?>"
 					class="regular-text code"
 					id="my-shortcode"
 					onClick="this.select();"
@@ -280,7 +280,6 @@ Domain Path: /languages
 			return $output;
 		}
 		add_shortcode( 'masonry', 'pegasus_mason_func' );
-
 
 
 
