@@ -243,9 +243,9 @@ Domain Path: /languages
 		//wp_enqueue_script( 'snap-scroll-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/jquery.snapscroll.js', array( 'jquery' ), null, true );
 		//wp_enqueue_script( 'scrollspy-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/scrollspy.js', array( 'jquery' ), null, true );
 
-		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), '5.0.0', 'all' );
 
-		wp_register_script( 'masonry-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/masonry.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'masonry-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/masonry.js', array( 'jquery' ), '4.2.2', 'all' );
 		wp_register_script( 'pegasus-masonry-plugin', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-masonry-plugin.js', array( 'jquery' ), null, 'all' );
 
 	} //end function
